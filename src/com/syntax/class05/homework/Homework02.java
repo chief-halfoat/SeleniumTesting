@@ -65,14 +65,14 @@ public class Homework02 {
         }
         for(WebElement dayOption:dayOptions){
             String dayOptionValue = dayOption.getText();
-            if(dayOptionValue.equals("26")){
+            if(dayOptionValue.equals("16")){
                 dayOption.click();
                 break;
             }
         }
         for(WebElement yearOption:yearOptions){
             String yearOptionValue=yearOption.getText();
-            if(yearOptionValue.equals("1988")){
+            if(yearOptionValue.equals("1986")){
                 yearOption.click();
                 break;
             }
