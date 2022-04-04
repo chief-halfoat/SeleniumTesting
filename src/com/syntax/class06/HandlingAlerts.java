@@ -15,12 +15,15 @@ public class HandlingAlerts {
         driver.get(url);
         driver.manage().window().maximize();
         Thread.sleep(1000);
+
         WebElement simpleAlertButton = driver.findElement(By.id("alert"));
         simpleAlertButton.click();
         Alert simpleAlert = driver.switchTo().alert();
         String alertText = simpleAlert.getText();
         System.out.println(alertText);
+
         Thread.sleep(1000);
+
         simpleAlert.accept();
 
         WebElement confirmAlertButton = driver.findElement(By.id("confirm"));

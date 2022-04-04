@@ -39,3 +39,7 @@ Frames allow devs to represent multiple views on one page
 
 In Alerts, we switch to Alerts and switch back automatically
 In Frames, we switch to a frame manually and we switch back manually
+
+****************INTERVIEW QUESTION****************
+Q: How do you handle alerts in Selenium?
+A: We handle alerts by using Alert Interface
