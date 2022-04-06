@@ -19,6 +19,8 @@ public class Homework01 {
         WebDriver driver=new ChromeDriver();
         driver.get(url);
         WebElement header = driver.findElement(By.xpath("//img[@id='hide']/parent::a"));
+        String headerText = header.getText();
+        System.out.println(headerText);
         System.out.println("The header text \"AUTOMATION TESTING PLATFORM BY SYNTAX\" is displayed : "+header.isDisplayed());
 
         driver.switchTo().frame("FrameTwo");
