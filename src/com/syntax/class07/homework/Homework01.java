@@ -11,6 +11,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.Iterator;
 import java.util.Set;
@@ -19,8 +20,8 @@ public class Homework01 {
     public static String url = "https://demoqa.com/browser-windows";
 
     public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+        System.setProperty("webdriver.gecko.driver", "driver/geckodriver.exe");
+        WebDriver driver = new FirefoxDriver();
         driver.get(url);
         String mainWindowHandle = driver.getWindowHandle();
         WebElement tabButton = driver.findElement(By.id("tabButton"));
@@ -50,24 +51,24 @@ public class Homework01 {
         }
         driver.close();
         driver.switchTo().window(mainWindowHandle);
-//        messageWindowButton.click();
-//        windowHandles = driver.getWindowHandles();
-//        iterator = windowHandles.iterator();
-//        while(iterator.hasNext()){
-//            String handle = iterator.next();
-//            if (!mainWindowHandle.equals(handle)){
-//                driver.switchTo().window(handle);
-//                System.out.println(driver.findElement(By.partialLinkText("Knowledge")).getText());
-//            }
-//        }
-//        driver.close();
+        messageWindowButton.click();
+        windowHandles = driver.getWindowHandles();
+        iterator = windowHandles.iterator();
+        while(iterator.hasNext()){
+            String handle = iterator.next();
+            if (!mainWindowHandle.equals(handle)){
+                driver.switchTo().window(handle);
+                System.out.println(driver.findElement(By.partialLinkText("Knowledge")).getText());
+            }
+        }
+        driver.close();
         driver.switchTo().window(mainWindowHandle);
 
 //        Set<String> allWindowHandles = driver.getWindowHandles();
 
         tabButton.click();
         windowButton.click();
-//        messageWindowButton.click();
+        messageWindowButton.click();
         windowHandles = driver.getWindowHandles();
         iterator = windowHandles.iterator();
         while (iterator.hasNext()) {

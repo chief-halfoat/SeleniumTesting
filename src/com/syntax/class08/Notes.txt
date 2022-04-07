@@ -1,0 +1,38 @@
+Selenium Class 08
+
+Implicit wait: will be applied for findElement method
+
+Explicit wait/WebDriver wait:
+    used to tell the WebDriver to wait for a certain condition before throwing an exception for a specified condition
+    works with ExpectedConditions class
+    waits until certain conditions are met or the given time is achieved
+
+Fluent waits
+    global wait
+    used tp tell the webdriver to wait for certain conditions as well as its frequency before throwing exceptions
+
+Implicit wait - waits to locate the element
+Explicit wait - waits until certain condition
+Fluent wait - sets timeouts, polling, and ignores needed exceptions
+
+========================================================================================================================
+Web Tables
+    elements on a webpage which are constructed with rows and columns
+
+Types of Web Tables
+1) Static
+2) Dynamic
+
+WebTables consist of different sections or parts
+<table>
+    <thead>
+        <tr>
+            <th></th> -- column data or heading data
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td> -- table data
+        </tr>
+    </tbody>
+</table>
