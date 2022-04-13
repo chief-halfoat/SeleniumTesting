@@ -39,6 +39,7 @@ public class homework01 {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()='Disable']")));
         WebElement textBox = driver.findElement(By.xpath("//input[@type='text']"));
         System.out.println("The textbox is enabled: "+textBox.isEnabled());
+        textBox.click();
         textBox.sendKeys("Booyahkasha");
         WebElement disableButton = driver.findElement(By.xpath("//button[text()='Disable']"));
         disableButton.click();
