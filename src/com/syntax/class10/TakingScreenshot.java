@@ -25,9 +25,10 @@ public class TakingScreenshot {
         TakesScreenshot ts =(TakesScreenshot)driver;
         File srcFile = ts.getScreenshotAs(OutputType.FILE);
         try {
-            FileUtils.copyFile(srcFile, new File("screenshots/SmartBear/adminLogin111.png"));
+            FileUtils.copyFile(srcFile, new File("screenshots/SmartBear/adminLogin111B.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
+        driver.quit();
     }
 }
