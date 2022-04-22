@@ -18,7 +18,7 @@ public class JSExecutor3 {
         driver.get(url);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         JavascriptExecutor js = (JavascriptExecutor) driver;
-//        js.executeScript("window.open('https://www.amazon.com');");
-        WebElement search = driver.findElement(By.name("q"));
-        search.sendKeys("ahshs");
+        js.executeScript("window.open('https://www.amazon.com');");
+//        WebElement search = driver.findElement(By.name("q"));
+//        search.sendKeys("ahshs");
 }}
