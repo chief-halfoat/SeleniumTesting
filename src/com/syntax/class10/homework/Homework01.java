@@ -20,9 +20,11 @@ public class Homework01 {
        // driver.manage().window().maximize();
         //finding departing date calendar button
         WebElement departDateCal = driver.findElement(By.xpath("(//button[@class = 'ui-datepicker-trigger'])[1]"));
+        //clicking the depart date calendar
         departDateCal.click();
         //finding the departing calendar month
         WebElement leftHandCalendar = driver.findElement(By.xpath("(//span[@class='ui-datepicker-month'])[1]"));
+        //getting the text of the month
         String leftHandCalendarText = leftHandCalendar.getText();
         //clicking through the months until August is the left-handed month
         while (!leftHandCalendarText.equals("August")) {
@@ -37,10 +39,15 @@ public class Homework01 {
         System.out.println(leftHandCalendarText);
         //getting a list of all dates inside the lefthand calendar
         List<WebElement> departDates = driver.findElements(By.xpath("(//table[@class='ui-datepicker-calendar'])[1]/tbody/tr/td"));
+        //looping through the dates
         for(WebElement departDate:departDates){
+            //getting the text of the date
             String date = departDate.getText();
+            //checking the date against the desired date
             if(date.equals("26")){
+                //clicking on the right date
                 departDate.click();
+                //breaking the loop
                 break;
             }
         }
